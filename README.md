@@ -26,10 +26,21 @@ Copland domain-specific language.
 - Related publication(s): none
 
 ## Building and installation instructions
-Get Chase Copland first
-Then something
+
+# Prerequisites
+Download the Copland collection at
+https://ku-sldg.github.io/copland//blog/2023/12/22/Copland-Collection-Updated.html
+and follow the installation instructions in the README.md.
+
+# Project
+To compile all the definitions and proof scripts, do:
+``` shell
+git clone git@github.com:Sarah-Scott/AttestationProtocolOrdering.git
+cd AttestationProtocolOrdering
+make
+cd theories
+```
 
 ## Documentation
 
-Attestation Protocol Ordering is cool.
-Here are file descriptions
+TODO

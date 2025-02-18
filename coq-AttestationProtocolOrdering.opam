@@ -2,7 +2,7 @@
 # Follow the instructions on https://github.com/coq-community/templates to regenerate.
 
 opam-version: "2.0"
-maintainer: "sarahjohnson@ku.edu"
+maintainer: "palmskog@gmail.com"
 version: "dev"
 
 homepage: "https://github.com/I2S/AttestationProtocolOrdering"
