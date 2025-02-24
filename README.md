@@ -27,18 +27,20 @@ Copland domain-specific language.
 
 ## Building and installation instructions
 
-# Prerequisites
-Download the Copland collection at
+### Prerequisites
+Download the Copland Collection at
 https://ku-sldg.github.io/copland//blog/2023/12/22/Copland-Collection-Updated.html
 and follow the installation instructions in the README.md.
 
-# Project
-To compile all the definitions and proof scripts, do:
+### Project
+Compile all the definitions and proof scripts with:
 ``` shell
-git clone git@github.com:Sarah-Scott/AttestationProtocolOrdering.git
-cd AttestationProtocolOrdering
 make
-cd theories
+```
+
+Optionally, install a local version of the library with:
+``` shell
+make install
 ```
 
 ## Documentation
