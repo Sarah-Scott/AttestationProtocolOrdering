@@ -25,13 +25,6 @@ attestation protocols, determines which protocol is better.
 - Related publication(s): none
 
 ## Building and installation instructions
-
-### Prerequisites
-Download the Copland Collection at
-https://ku-sldg.github.io/copland//blog/2023/12/22/Copland-Collection-Updated.html
-and follow the installation instructions in the README.md.
-
-### Project
 Compile all the definitions and proof scripts with:
 ``` shell
 make
