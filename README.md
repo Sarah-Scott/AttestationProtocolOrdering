@@ -9,10 +9,9 @@ Follow the instructions on https://github.com/coq-community/templates to regener
 
 
 
-AttestationProtocolOrdering is a Coq library for ordering attestation
-protocols by their difficulty to attack. Relies on the Chase model finder
-to enumerate possible attacks on attestation protocols specified in the
-Copland domain-specific language.
+AttestationProtocolOrdering is a Coq library for ordering attestation protocols 
+by their difficulty to attack. Given the sets of all possible attacks on two 
+attestation protocols, determines which protocol is better.
 
 ## Meta
 
@@ -44,5 +43,14 @@ make install
 ```
 
 ## Documentation
+To order two attestation protocols, first generate all possible attacks. Attacks should be in an abstract form: 
+directed graph where nodes are either measurement events or adversarial corruption/repair events and 
+edges are chronological time. We recommend using the Chase model finder to enumerate all possible 
+attacks on an attestation protocol specified in the Copland domain-specific language. For examples using 
+Chase with the AttestationProtocolOrdering library, please see the ProtocolOrderingExamples repository at 
+https://github.com/Sarah-Scott/ProtocolOrderingExamples.git. 
 
-TODO
+The function `order_fix` decidably determines the ordering relationship between two attestation protocols 
+specified by their sets of attacks returning either `equiv` if they are equally difficult to attack, `leq` if the
+first protocol is easier to attack, `geq` if the first protocol is harder to attack, or `incomparable` if an ordering
+cannot be determined between them. 

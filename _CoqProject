@@ -1,21 +1,18 @@
 -Q theories AttestationProtocolOrdering
 -arg -w -arg -notation-overridden
 
-theories/utilities/logics.v
-theories/utilities/ltacs.v
-theories/utilities/lists.v
-theories/utilities/existsb.v
-theories/utilities/labelSubsets.v
+theories/utilities/list_removeFirst.v
+theories/utilities/nat_le.v
+theories/utilities/mset.v
 theories/utilities/supports.v
 
 theories/attacktree.v
 theories/attacktree_normalization.v
-theories/pi.v
-theories/tau.v
+theories/attacktree_adversary.v
 theories/attacktree_ordering.v
 theories/set_minimization.v
 theories/set_ordering.v
-theories/protocol_ordering.v
+theories/set_relationship.v
 
 
 
