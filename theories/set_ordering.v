@@ -1,12 +1,9 @@
 Require Import Coq.Lists.List.
 
-Require Import AttestationProtocolOrdering.utilities.ltacs.
-Require Import AttestationProtocolOrdering.utilities.lists.
-Require Import AttestationProtocolOrdering.utilities.existsb.
-Require Import AttestationProtocolOrdering.utilities.labelSubsets.
 Require Import AttestationProtocolOrdering.utilities.supports.
 
 Require Import AttestationProtocolOrdering.attacktree.
+Require Import AttestationProtocolOrdering.attacktree_adversary.
 Require Import AttestationProtocolOrdering.attacktree_ordering.
 Require Import AttestationProtocolOrdering.set_minimization.
 
@@ -174,7 +171,7 @@ Section SetOrdering.
         apply HPQ in HIn'; destruct HIn' as [A HIn']; destruct HIn';
         exists A; split;
         [ eapply min_in; eauto | ];
-        apply preceq_preceq; apply preceq_preceq in H; destruct H; 
+        apply preceq_correct; apply preceq_correct in H; destruct H; 
         [ left; eapply prec_simeq1 | right; eapply simeq_transitive ]; eauto.
     Qed.
 
@@ -238,10 +235,10 @@ Section SetOrdering.
         intros A' HIn; pose proof HIn as HIn';
         [ apply HPQ in HIn' | apply HQP in HIn' ];
         destruct HIn' as [B' HIn']; destruct HIn' as [HIn' HOrd];
-        apply preceq_preceq in HOrd; destruct HOrd.
+        apply preceq_correct in HOrd; destruct HOrd.
         - exfalso; 
           apply HQP in HIn'; destruct HIn' as [A HIn']; destruct HIn' as [HIn' HOrd];
-          apply preceq_preceq in HOrd; destruct HOrd;
+          apply preceq_correct in HOrd; destruct HOrd;
           [ assert (prec A A') as contra by (eapply prec_transitive; eauto)
           | assert (prec A A') as contra by (eapply prec_simeq1; eauto) ];
           pose proof (min_minimal Q Q' HMinQ A' HIn) as HMin;
@@ -251,7 +248,7 @@ Section SetOrdering.
         - exists B'; auto.
         - exfalso; 
           apply HPQ in HIn'; destruct HIn' as [A HIn']; destruct HIn' as [HIn' HOrd];
-          apply preceq_preceq in HOrd; destruct HOrd;
+          apply preceq_correct in HOrd; destruct HOrd;
           [ assert (prec A A') as contra by (eapply prec_transitive; eauto)
           | assert (prec A A') as contra by (eapply prec_simeq1; eauto) ];
           pose proof (min_minimal P P' HMinP A' HIn) as HMin;
@@ -261,7 +258,5 @@ Section SetOrdering.
         - exists B'; auto.
     Qed.
 
-
-    
 
 End SetOrdering. 

@@ -15,12 +15,8 @@
 Require Import Coq.Lists.List.
 Require Import Coq.Init.Datatypes.
 
-Require Import AttestationProtocolOrdering.utilities.ltacs.
-Require Import AttestationProtocolOrdering.utilities.lists.
-Require Import AttestationProtocolOrdering.utilities.existsb.
-Require Import AttestationProtocolOrdering.utilities.labelSubsets.
-
-Require Export AttestationProtocolOrdering.attacktree.
+Require Import AttestationProtocolOrdering.utilities.list_removeFirst.
+Require Import AttestationProtocolOrdering.attacktree.
 
 
 

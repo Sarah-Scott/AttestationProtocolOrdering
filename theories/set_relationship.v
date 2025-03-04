@@ -1,13 +1,7 @@
 Require Import Coq.Lists.List.
 
-Require Import AttestationProtocolOrdering.utilities.ltacs.
-Require Import AttestationProtocolOrdering.utilities.lists.
-Require Import AttestationProtocolOrdering.utilities.existsb.
-Require Import AttestationProtocolOrdering.utilities.labelSubsets.
-Require Import AttestationProtocolOrdering.utilities.supports.
-
 Require Import AttestationProtocolOrdering.attacktree.
-Require Import AttestationProtocolOrdering.attacktree_normalization.
+Require Import AttestationProtocolOrdering.attacktree_adversary.
 Require Import AttestationProtocolOrdering.attacktree_ordering.
 Require Import AttestationProtocolOrdering.set_minimization.
 Require Import AttestationProtocolOrdering.set_ordering.
